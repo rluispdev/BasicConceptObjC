@@ -17,12 +17,17 @@ NSString *const myPINumber = @"3.14";
 
 @implementation ViewController
 
+- (int) returnDouble: (int) i {
+    return i * 2;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     // Inicializa a variável de instância
     _myBuffer = @"";
-    
+
     //MARK: - Mathematics Operations
     /*
      int x = 4;
@@ -108,7 +113,7 @@ NSString *const myPINumber = @"3.14";
     */
     
     //MARK: - SWITCH
-    
+    /*
     int i = 2;
     
     switch (i) {
@@ -128,6 +133,13 @@ NSString *const myPINumber = @"3.14";
             _myBuffer = @"i não entrou em nenhum case";
             break;
     }
+     */
+    
+    //MARK: -  COMO CRIAR E INVOCAR UMA FUNÇÃO
+    
+    int x = 5;
+    int z = [self returnDouble:x];
+    _myBuffer = [[NSString alloc] initWithFormat:@"O Dobro de %d é %d", x, z];
 
 }
 
