@@ -9,7 +9,7 @@
 
 @interface ViewController ()
 // Declaração da variável de instância
-@property (nonatomic, strong) NSString *mensagem;
+@property (nonatomic, strong) NSString *myBuffer;
 
 @end
 
@@ -19,15 +19,26 @@
 [super viewDidLoad];
 
 // Inicializa a variável de instância
-self.mensagem = @"Esta é uma mensagem de alerta.";
+    _myBuffer = @"";
+    
+    ///Mathematics Operations
+    
+    int x = 4;
+    int  y = 3;
+    float z = x / y;
+    
+    _myBuffer = [[ NSString alloc] initWithFormat:@"Resultado: %f", z];
+
 }
+
+
 
 - (void)viewDidAppear:(BOOL)animated {
 [super viewDidAppear:animated];
 
 // Criar o alerta
 UIAlertController *alerta = [UIAlertController alertControllerWithTitle:@"Alerta"
-                                                             message:self.mensagem // Utiliza a variável de instância
+                                                             message: _myBuffer // Utiliza a variável de instância
                                                       preferredStyle:UIAlertControllerStyleAlert];
 // Criar a ação "OK"
 UIAlertAction *acaoOK = [UIAlertAction actionWithTitle:@"OK"
