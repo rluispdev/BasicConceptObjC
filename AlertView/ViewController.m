@@ -52,8 +52,7 @@ NSString *const myPINumber = @"3.14";
   
     
     //MARK: - While + continue
-    
-    
+    /*
     _myBuffer = @"while: ";
     int i = 0;
     
@@ -71,6 +70,19 @@ NSString *const myPINumber = @"3.14";
         i++;
     }
     
+    */
+    
+//MARK: - DO WHILE
+    
+    _myBuffer = @" do while: ";
+    int i = 10;
+    do {
+        NSString *newString = [[NSString alloc] initWithFormat:@"%d", i];
+        ///Concatenando a informação na variaviavel.
+        _myBuffer = [_myBuffer stringByAppendingString:newString];
+        i ++;
+        
+    } while (i < 5);
 }
 
 
