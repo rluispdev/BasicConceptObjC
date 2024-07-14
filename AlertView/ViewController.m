@@ -74,6 +74,7 @@ NSString *const myPINumber = @"3.14";
     
 //MARK: - DO WHILE
     
+    /*
     _myBuffer = @" do while: ";
     int i = 10;
     do {
@@ -83,6 +84,19 @@ NSString *const myPINumber = @"3.14";
         i ++;
         
     } while (i < 5);
+     */
+    
+    //MARK: - Command IF
+    /*
+    _myBuffer = @"if : ";
+    int i = 3;
+    
+    if ( i > 5 || i == 2){
+        _myBuffer = [_myBuffer stringByAppendingString:@"i é maior que 5"];
+    }else {
+        _myBuffer = [_myBuffer stringByAppendingString:@"i é menor ou igual que 5"];
+    }
+    */
 }
 
 
