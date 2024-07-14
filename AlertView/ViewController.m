@@ -7,6 +7,8 @@
 
 #import "ViewController.h"
 
+NSString *const myPINumber = @"3.14";
+
 @interface ViewController ()
 // Declaração da variável de instância
 @property (nonatomic, strong) NSString *myBuffer;
@@ -21,15 +23,28 @@
 // Inicializa a variável de instância
     _myBuffer = @"";
     
-    ///Mathematics Operations
-    
+    //MARK: - Mathematics Operations
+    /*
     int x = 4;
     int  y = 3;
     float z = (float)x / (float)y;
+     
+     _myBuffer = [[ NSString alloc] initWithFormat:@"Resultado: %f", z];
+    */
+ 
     
+    //MARK: - Constants
+    
+    float z = [myPINumber floatValue] * 2;
     _myBuffer = [[ NSString alloc] initWithFormat:@"Resultado: %f", z];
 
 }
+
+
+
+
+
+
 
 
 - (void)viewDidAppear:(BOOL)animated {
