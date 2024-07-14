@@ -144,12 +144,23 @@ NSString *const myPINumber = @"3.14";
     
     //MARK: - NSINTEGER e NSNUMBER
     
-    NSInteger *myIntObject = 50;
-    _myBuffer = [[NSString alloc] initWithFormat:@"%d", myIntObject];
+    /*
+     NSInteger *myIntObject = 50;
+        _myBuffer = [[NSString alloc] initWithFormat:@"%d", myIntObject];
+        
+        
+        NSNumber *myNumberObject = [[NSNumber alloc] initWithDouble:10.35];
+        _myBuffer = [[NSString alloc] initWithFormat:@"%f", [myNumberObject floatValue]];
+        
+     */
+   
+    //MARK: -  NSARRAY
     
+    NSArray *myArray = [[NSArray alloc] initWithObjects: @"Vermelho", @"Verde", @"Azul", nil];
+    int pos = 2;
     
-    NSNumber *myNumberObject = [[NSNumber alloc] initWithDouble:10.35];
-    _myBuffer = [[NSString alloc] initWithFormat:@"%f", [myNumberObject floatValue]];
+    NSString *myObject = [myArray objectAtIndex:pos];
+    _myBuffer = [[ NSString alloc] initWithFormat:@"Na posição %d está o objeto %@", pos, myObject];
     
 }
 
