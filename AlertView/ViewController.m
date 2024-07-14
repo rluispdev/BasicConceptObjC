@@ -51,11 +51,18 @@ NSString *const myPINumber = @"3.14";
        */
   
     
-    //MARK: - While
+    //MARK: - While + break
+    
+    
     _myBuffer = @"while: ";
     int i = 0;
     
     while (i<5) {
+        
+        if(i == 3){
+            break;
+        }
+        
         NSString *newString = [[NSString alloc] initWithFormat:@"%d", i];
         ///Concatenando a informação na variaviavel.
         _myBuffer = [_myBuffer stringByAppendingString:newString];
