@@ -136,11 +136,21 @@ NSString *const myPINumber = @"3.14";
      */
     
     //MARK: -  COMO CRIAR E INVOCAR UMA FUNÇÃO
-    
+   /*
     int x = 5;
     int z = [self returnDouble:x];
     _myBuffer = [[NSString alloc] initWithFormat:@"O Dobro de %d é %d", x, z];
-
+*/
+    
+    //MARK: - NSINTEGER e NSNUMBER
+    
+    NSInteger *myIntObject = 50;
+    _myBuffer = [[NSString alloc] initWithFormat:@"%d", myIntObject];
+    
+    
+    NSNumber *myNumberObject = [[NSNumber alloc] initWithDouble:10.35];
+    _myBuffer = [[NSString alloc] initWithFormat:@"%f", [myNumberObject floatValue]];
+    
 }
 
 
