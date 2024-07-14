@@ -34,10 +34,24 @@ NSString *const myPINumber = @"3.14";
  
     
     //MARK: - Constants
-    
+   /*
     float z = [myPINumber floatValue] * 2;
     _myBuffer = [[ NSString alloc] initWithFormat:@"Resultado: %f", z];
-
+*/
+    
+    //MARK: - For
+    
+    _myBuffer = @"for: ";
+    
+    for(int i=0; i<5; i++){
+        
+        NSString *newString = [[NSString alloc] initWithFormat:@"%d", i];
+        ///Concatenando a informação na variaviavel.
+        _myBuffer = [_myBuffer stringByAppendingString:newString];
+        
+    }
+    
+    
 }
 
 
