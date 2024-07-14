@@ -51,7 +51,7 @@ NSString *const myPINumber = @"3.14";
        */
   
     
-    //MARK: - While + break
+    //MARK: - While + continue
     
     
     _myBuffer = @"while: ";
@@ -60,7 +60,8 @@ NSString *const myPINumber = @"3.14";
     while (i<5) {
         
         if(i == 3){
-            break;
+            i++;
+            continue;
         }
         
         NSString *newString = [[NSString alloc] initWithFormat:@"%d", i];
