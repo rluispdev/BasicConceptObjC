@@ -99,14 +99,36 @@ NSString *const myPINumber = @"3.14";
      */
     
     //MARK: - SHORT IF
-    
+    /*
     int  i = 5;
     
     _myBuffer = i == 5 ? @"i é 5" : @"i é outro valor";
     
     _myBuffer = (i % 2 == 0) ? @"PAR" : @"IMPAR";
+    */
     
+    //MARK: - SWITCH
     
+    int i = 2;
+    
+    switch (i) {
+        case 1:
+            _myBuffer = @"i entrou no primeiro case case";
+            break;
+            
+        case 2:
+            _myBuffer = @"i entrou no segundo case case";
+            break;
+           
+        case 3:
+            _myBuffer = @"i entrou no terceiro case case";
+            break;
+            
+        default:
+            _myBuffer = @"i não entrou em nenhum case";
+            break;
+    }
+
 }
 
 
