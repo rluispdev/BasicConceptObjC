@@ -25,12 +25,11 @@
     
     int x = 4;
     int  y = 3;
-    float z = x / y;
+    float z = (float)x / (float)y;
     
     _myBuffer = [[ NSString alloc] initWithFormat:@"Resultado: %f", z];
 
 }
-
 
 
 - (void)viewDidAppear:(BOOL)animated {
