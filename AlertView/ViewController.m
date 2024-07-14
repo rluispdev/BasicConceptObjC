@@ -18,92 +18,96 @@ NSString *const myPINumber = @"3.14";
 @implementation ViewController
 
 - (void)viewDidLoad {
-[super viewDidLoad];
-
-// Inicializa a variável de instância
+    [super viewDidLoad];
+    
+    // Inicializa a variável de instância
     _myBuffer = @"";
     
     //MARK: - Mathematics Operations
     /*
-    int x = 4;
-    int  y = 3;
-    float z = (float)x / (float)y;
+     int x = 4;
+     int  y = 3;
+     float z = (float)x / (float)y;
      
      _myBuffer = [[ NSString alloc] initWithFormat:@"Resultado: %f", z];
-    */
- 
+     */
+    
     
     //MARK: - Constants
-   /*
-    float z = [myPINumber floatValue] * 2;
-    _myBuffer = [[ NSString alloc] initWithFormat:@"Resultado: %f", z];
-*/
+    /*
+     float z = [myPINumber floatValue] * 2;
+     _myBuffer = [[ NSString alloc] initWithFormat:@"Resultado: %f", z];
+     */
     
     //MARK: - For
     /*
-    _myBuffer = @"for: ";
+     _myBuffer = @"for: ";
+     
+     for(int i=0; i<5; i++){
+     
+     NSString *newString = [[NSString alloc] initWithFormat:@"%d", i];
+     ///Concatenando a informação na variaviavel.
+     _myBuffer = [_myBuffer stringByAppendingString:newString];
+     */
     
-    for(int i=0; i<5; i++){
-        
-        NSString *newString = [[NSString alloc] initWithFormat:@"%d", i];
-        ///Concatenando a informação na variaviavel.
-        _myBuffer = [_myBuffer stringByAppendingString:newString];
-       */
-  
     
     //MARK: - While + continue
     /*
-    _myBuffer = @"while: ";
-    int i = 0;
+     _myBuffer = @"while: ";
+     int i = 0;
+     
+     while (i<5) {
+     
+     if(i == 3){
+     i++;
+     continue;
+     }
+     
+     NSString *newString = [[NSString alloc] initWithFormat:@"%d", i];
+     ///Concatenando a informação na variaviavel.
+     _myBuffer = [_myBuffer stringByAppendingString:newString];
+     
+     i++;
+     }
+     
+     */
     
-    while (i<5) {
-        
-        if(i == 3){
-            i++;
-            continue;
-        }
-        
-        NSString *newString = [[NSString alloc] initWithFormat:@"%d", i];
-        ///Concatenando a informação na variaviavel.
-        _myBuffer = [_myBuffer stringByAppendingString:newString];
-        
-        i++;
-    }
-    
-    */
-    
-//MARK: - DO WHILE
+    //MARK: - DO WHILE
     
     /*
-    _myBuffer = @" do while: ";
-    int i = 10;
-    do {
-        NSString *newString = [[NSString alloc] initWithFormat:@"%d", i];
-        ///Concatenando a informação na variaviavel.
-        _myBuffer = [_myBuffer stringByAppendingString:newString];
-        i ++;
-        
-    } while (i < 5);
+     _myBuffer = @" do while: ";
+     int i = 10;
+     do {
+     NSString *newString = [[NSString alloc] initWithFormat:@"%d", i];
+     ///Concatenando a informação na variaviavel.
+     _myBuffer = [_myBuffer stringByAppendingString:newString];
+     i ++;
+     
+     } while (i < 5);
      */
     
     //MARK: - Command IF
     /*
-    _myBuffer = @"if : ";
-    int i = 3;
+     _myBuffer = @"if : ";
+     int i = 3;
+     
+     if ( i > 5 || i == 2){
+     _myBuffer = [_myBuffer stringByAppendingString:@"i é maior que 5"];
+     }else {
+     _myBuffer = [_myBuffer stringByAppendingString:@"i é menor ou igual que 5"];
+     }
+     */
     
-    if ( i > 5 || i == 2){
-        _myBuffer = [_myBuffer stringByAppendingString:@"i é maior que 5"];
-    }else {
-        _myBuffer = [_myBuffer stringByAppendingString:@"i é menor ou igual que 5"];
-    }
-    */
+    //MARK: - SHORT IF
+    
+    int  i = 5;
+    
+    _myBuffer = i == 5 ? @"i é 5" : @"i é outro valor";
+    
+    _myBuffer = (i % 2 == 0) ? @"PAR" : @"IMPAR";
+    
+    
 }
-
-
-
-
-
-
 
 
 - (void)viewDidAppear:(BOOL)animated {
