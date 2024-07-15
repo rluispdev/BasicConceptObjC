@@ -169,6 +169,7 @@ NSString *const myPINumber = @"3.14";
     
    //MARK: - NSDICTIONARY
     
+    /*
     NSDictionary *myDictionary = [[NSDictionary alloc] initWithObjectsAndKeys:
                                    @"1", @"One",
                                    @"2", @"Two",
@@ -177,7 +178,12 @@ NSString *const myPINumber = @"3.14";
     NSString *myObject = [myDictionary objectForKey:myKey];
     
     _myBuffer = [[ NSString alloc] initWithFormat:@"Chave %@ é do objeto %@", myKey, myObject];
-     
+     */
+    
+    //MARK: - NSASSERT
+    
+    bool myCondition = 5 < 3;
+    NSAssert(myCondition, @"Exception lançada");
 }
 
 
