@@ -156,13 +156,30 @@ NSString *const myPINumber = @"3.14";
    
     //MARK: -  NSARRAY
     
+    /*
     NSArray *myArray = [[NSArray alloc] initWithObjects: @"Vermelho", @"Verde", @"Azul", nil];
     int pos = 2;
     
     NSString *myObject = [myArray objectAtIndex:pos];
     _myBuffer = [[ NSString alloc] initWithFormat:@"Na posição %d está o objeto %@", pos, myObject];
+     
+     int total = [myArray count];
+    _myBuffer = [[ NSString alloc] initWithFormat:@"Meu array contém %d elementos", total];
+     */
     
+   //MARK: - NSDICTIONARY
+    
+    NSDictionary *myDictionary = [[NSDictionary alloc] initWithObjectsAndKeys:
+                                   @"1", @"One",
+                                   @"2", @"Two",
+                                   @"3", @"Three", nil];
+    NSString *myKey = @"One";
+    NSString *myObject = [myDictionary objectForKey:myKey];
+    
+    _myBuffer = [[ NSString alloc] initWithFormat:@"Chave %@ é do objeto %@", myKey, myObject];
+     
 }
+
 
 
 - (void)viewDidAppear:(BOOL)animated {
